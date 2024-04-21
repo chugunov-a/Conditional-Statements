@@ -41,10 +41,10 @@ public class Main {
             boolean firstYear = (year < 1584);
             if (firstYear) {
                 System.out.println(" Введите значение больше 1584");
-            } else if (year % 4 == 0 || year % 400 == 0) {
-                System.out.println(" Год является високосным");
-            } else if (year % 100 != 0) {
-                System.out.println(" Год не является високосным");
+            } else if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                System.out.println(year + " год является високосным");
+            } else {
+                System.out.println(year + " год не является високосным");
             }
         }
         System.out.println("Задание 4");
